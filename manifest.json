@@ -3,7 +3,7 @@
   "short_name": "Ціна за 100г",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#584c02",
   "theme_color": "#ffffff",
   "lang": "uk"
 }
