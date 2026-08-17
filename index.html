@@ -1,0 +1,60 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Розрахунок вартості за 100 грам товару</title>
+  </head>
+  <body>
+    <script>
+      const weight = +prompt("Введіть кількість товару у грамах", 0);
+      const priceForTheProduct = +prompt(
+        "Введіть ціну товару (наприклад 67.20)",
+        0,
+      );
+      const grams = 100;
+
+      const gramsReceived = weight / grams;
+      const amountReceived = priceForTheProduct / gramsReceived;
+      alert(`Сума за 100грам: ${amountReceived.toFixed(2)} гривень`);
+    </script>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <title>Розрахунок вартості за 100грам</title>
+  </head>
+
+  <body>
+    <script>
+      const weight = +prompt("Введіть кількість товару у грамах", 0);
+
+      const priceForTheProduct = +prompt(
+        "Введіть ціну товару (наприклад 67.20)",
+        0,
+      );
+
+      const grams = 100;
+
+      const gramsReceived = weight / grams;
+      const amountReceived = priceForTheProduct / gramsReceived;
+
+      alert(`Сума за 100 грам: ${amountReceived.toFixed(2)} гривень`);
+    </script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+  </body>
+</html>

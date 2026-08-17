@@ -1,0 +1,9 @@
+{
+  "name": "Розрахунок вартості за 100 грам",
+  "short_name": "Ціна за 100г",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "uk"
+}
