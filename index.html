@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- <meta name="theme-color" content="#ffffff" /> -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- <link rel="manifest" href="manifest.json" /> -->
 
@@ -15,53 +15,79 @@
   <body>
     <div class="calculator">
       <h1 class="hero-title">Калькулятор ціни</h1>
-      <p>Визначення вартості за 100 грам</p>
+      <p class="description">Визначення вартості за 100 грам</p>
 
-      <div>
-        <lable for="weight">Введіть кількість товару (г).</lable>
+      <div class="calculator-group">
+        <label class="group-label" for="weight"
+          >Введіть кількість товару (г).</label
+        >
         <input
+          class="group-input"
           type="number"
           name="weight"
           id="weight"
+          min="1"
           placeholder="Наприклад: 500"
         />
       </div>
 
-      <div>
-        <lable for="price">Введіть ціну товару (грн).</lable>
+      <div class="calculator-group">
+        <label class="group-label" for="price"
+          >Введіть ціну товару (грн).</label
+        >
         <input
+          class="group-input"
           type="number"
           name="price"
           id="price"
+          min="1"
           placeholder="Наприклад: 120"
         />
-        <button onclick="calculate()">Розрахувати</button>
-        <div class="result" id="result">
-          <p>Введіть дані та натисніть «Розрахувати»</p>
-        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn-count" onclick="calculate()">Ok</button>
+        <button class="btn-cancel" onclick="cancel()">Cancel</button>
+      </div>
+      <div class="result" id="result">
+        <p>«Результат»</p>
       </div>
     </div>
 
-    <!-- <script>
-      alert("Визначення суми товару, за 100 грам продукту");
-      const weight = +prompt("Введіть кількість товару у грамах.");
+    <script>
+      function calculate() {
+        const weight = +document.querySelector("#weight").value;
 
-      const priceForTheProduct = +prompt("Введіть ціну товару.");
+        const price = +document.querySelector("#price").value;
 
-      const grams = 100;
+        const result = document.querySelector("#result");
 
-      const gramsReceived = weight / grams;
-      const amountReceived = priceForTheProduct / gramsReceived;
+        if (!weight || !price) {
+          result.innerHTML = `
+      <p>Будь ласка, введіть вагу та ціну товару.</p>
+    `;
+          return;
+        }
 
-      const result = `Сума за 100 грам: ${amountReceived.toFixed(2)} гривень.
-Введена кількість товару: ${weight} грам.
-Введена ціна товару: ${priceForTheProduct} гривень.`;
+        const grams = 100;
 
-      alert(result);
+        const gramsReceived = weight / grams;
+        const amountReceived = price / gramsReceived;
 
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./sw.js");
+
+        result.innerHTML = `
+    <p>Сума за 100 грам: ${amountReceived.toFixed(2)} грн</p>
+    <p>Введена кількість товару: ${weight} г</p>
+    <p>Введена ціна товару: ${price} грн</p>
+  `;
       }
-    </script> -->
+      function cancel() {
+        document.querySelector("#weight").value = "";
+        document.querySelector("#price").value = "";
+
+        document.querySelector("#result").textContent = `
+          «Результат»
+        `;
+      }
+    </script>
   </body>
 </html>
