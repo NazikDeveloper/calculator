@@ -4,16 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="theme-color" content="#ffffff" />
+    <!-- <meta name="theme-color" content="#ffffff" /> -->
+    <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="manifest" href="manifest.json" />
+    <!-- <link rel="manifest" href="manifest.json" /> -->
 
-    <title>Розрахунок вартості за 100грам</title>
-    
+    <title>Калькулятор ціни</title>
   </head>
 
   <body>
-    <script>
+    <div class="calculator">
+      <h1 class="hero-title">Калькулятор ціни</h1>
+      <p>Визначення вартості за 100 грам</p>
+
+      <div>
+        <lable for="weight">Введіть кількість товару (г).</lable>
+        <input
+          type="number"
+          name="weight"
+          id="weight"
+          placeholder="Наприклад: 500"
+        />
+      </div>
+
+      <div>
+        <lable for="price">Введіть ціну товару (грн).</lable>
+        <input
+          type="number"
+          name="price"
+          id="price"
+          placeholder="Наприклад: 120"
+        />
+        <button onclick="calculate()">Розрахувати</button>
+        <div class="result" id="result">
+          <p>Введіть дані та натисніть «Розрахувати»</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script>
       alert("Визначення суми товару, за 100 грам продукту");
       const weight = +prompt("Введіть кількість товару у грамах.");
 
@@ -31,9 +60,8 @@
       alert(result);
 
       if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("./sw.js");
-        }
-    </script>
+        navigator.serviceWorker.register("./sw.js");
+      }
+    </script> -->
   </body>
 </html>
-
