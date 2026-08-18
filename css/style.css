@@ -76,7 +76,7 @@ p {
   flex-direction: column;
   margin: 0 auto;
   background-color: rgba(202, 113, 113, 0.918);
-  width: min(600px, 100%);
+width: min(600px, calc(100% - 30px));
   min-height: 600px;
   border-radius: 34px;
   padding: 60px;
@@ -132,6 +132,7 @@ p {
   width: 30%;
   border: none;
   cursor: pointer;
+color: #000000;
   transition:
     transform 150ms ease,
     color 150ms ease,
@@ -156,6 +157,7 @@ p {
   width: 30%;
   border: none;
   cursor: pointer;
+color: #000000;
   transition:
     transform 150ms ease,
     color 150ms ease,
