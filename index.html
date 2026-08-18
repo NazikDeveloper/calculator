@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <meta name="theme-color" content="#ffffff" /> -->
-    <link rel="stylesheet" href="./css/style.css" />
+     <!-- --------------------------------- -->
 
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+<meta name="theme-color" content="#ffffff" />
 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Ціна за 100г" />
+
+<link rel="apple-touch-icon" href="./image/icon -192 .png" />
+     <!-- ------------------------------ -->
+
+    <link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="./css/style.css" />
     <title>Калькулятор ціни</title>
   </head>
 
@@ -87,6 +95,11 @@
         document.querySelector("#result").textContent = `
           «Результат»
         `;
+      }
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js");
       }
     </script>
   </body>
