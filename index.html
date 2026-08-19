@@ -21,44 +21,44 @@
     <title>Калькулятор ціни</title>
   </head>
 
-  <body>
-    <div class="calculator">
-      <h1 class="hero-title">Калькулятор ціни</h1>
-      <p class="description">Визначення вартості за 100 грам</p>
-
-      <div class="calculator-group">
-        <label class="group-label" for="weight"
-          >Введіть кількість товару (г).</label
-        >
-        <input
-          class="group-input"
-          type="number"
-          name="weight"
-          id="weight"
-          min="1"
-          placeholder="Наприклад: 500"
-        />
-      </div>
-
-      <div class="calculator-group">
-        <label class="group-label" for="price"
-          >Введіть ціну товару (грн).</label
-        >
-        <input
-          class="group-input"
-          type="number"
-          name="price"
-          id="price"
-          min="1"
-          placeholder="Наприклад: 120"
-        />
-      </div>
-      <div class="btn-container">
-        <button class="btn-count" onclick="calculate()">Ok</button>
-        <button class="btn-cancel" onclick="cancel()">Cancel</button>
-      </div>
-      <div class="result" id="result">
-        <p>«Результат»</p>
+  <body >
+    <div class="calculator-container">
+      <div class="calculator">
+        <h1 class="hero-title">Калькулятор ціни</h1>
+        <p class="description">Визначення вартості за 100 грам</p>
+        <div class="calculator-group">
+          <label class="group-label" for="weight"
+            >Введіть кількість товару (г).</label
+          >
+          <input
+            class="group-input"
+            type="number"
+            name="weight"
+            id="weight"
+            min="1"
+            placeholder="Наприклад: 500"
+          />
+        </div>
+        <div class="calculator-group">
+          <label class="group-label" for="price"
+            >Введіть ціну товару (грн).</label
+          >
+          <input
+            class="group-input"
+            type="number"
+            name="price"
+            id="price"
+            min="1"
+            placeholder="Наприклад: 120"
+          />
+        </div>
+        <div class="btn-container">
+          <button class="btn-count" onclick="calculate()">Ok</button>
+          <button class="btn-cancel" onclick="cancel()">Cancel</button>
+        </div>
+        <div class="result" id="result">
+          <p>«Результат»</p>
+        </div>
       </div>
     </div>
 
