@@ -8,10 +8,7 @@ const FILES_TO_CACHE = [
   "./image/icon-192.png",
   "./image/icon-512.png",
   "./fonts/poppins-v24-latin-regular.woff2",
-  "./fonts/poppins-v24-latin-500.woff2",
-  "./fonts/poppins-v24-latin-600.woff2",
   "./fonts/poppins-v24-latin-800.woff2",
-  "./fonts/poppins-v24-latin-900.woff2",
 ];
 
 self.addEventListener("install", event => {
