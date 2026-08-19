@@ -48,14 +48,14 @@ p {
   margin: 0;
 }
 
-/* .container-calculator {
+.container-calculator {
   display: flex;
-  background-color: aqua;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-} */
+}
 
 /* .calculator {
   display: flex;
